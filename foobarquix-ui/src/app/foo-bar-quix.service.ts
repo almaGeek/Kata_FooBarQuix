@@ -10,7 +10,6 @@ export class FooBarQuixService {
   constructor(private httpCLient: HttpClient) { }
 
   public convertNumber(value: number): Observable<Result> {
-    console.log('sss')
     return this.httpCLient.get<Result>(`http://localhost:8080/foo-bar-quix/${value}`);
   }
 
